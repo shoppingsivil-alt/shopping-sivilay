@@ -5,6 +5,8 @@ export type Experience = {
   to: string
   bullets: string[]
   tags?: string[]
+  url?: string
+  logo?: string
 }
 
 export type Education = {
@@ -28,6 +30,7 @@ export const profile = {
   phones: ['+1 (786) 969-2645', '+1 (757) 337-7641'],
   github: 'https://github.com/shoppingsivil-alt',
   location: 'USA',
+  avatarUrl: 'https://github.com/shoppingsivil-alt.png',
 }
 
 export const summary =
@@ -43,6 +46,19 @@ export const skills: Skills = {
 
 export const experiences: Experience[] = [
   {
+    company: 'OneTake.ai',
+    role: 'Full Stack Engineer (AI Chat & LipSync)',
+    from: 'Jan 2023',
+    to: 'Mar 2024',
+    bullets: [
+      'Implemented AI chat with streaming responses and conversation memory.',
+      'Built lip‑sync generation pipeline integrating TTS and video synthesis.',
+      'Delivered end‑to‑end UX for prompts, generation status, and delivery.',
+    ],
+    tags: ['AI', 'Chat', 'LipSync', 'TTS', 'Node.js', 'React'],
+    url: 'https://onetake.ai',
+  },
+  {
     company: 'Roadjockey.com',
     role: 'Backend Developer (NestJS)',
     from: 'Aug 2019',
@@ -53,6 +69,7 @@ export const experiences: Experience[] = [
       'Collaborated with cross-functional teams to optimize architecture and UX.',
     ],
     tags: ['NestJS', 'Node.js', 'REST', 'PostgreSQL', 'AWS'],
+    url: 'https://roadjockey.com',
   },
   {
     company: 'Flokifi',
@@ -65,6 +82,7 @@ export const experiences: Experience[] = [
       'Drove continuous testing and performance tuning for smart contract efficiency.',
     ],
     tags: ['Solidity', 'Smart Contracts', 'Web3', 'Node.js'],
+    url: 'https://flokifi.com',
   },
   {
     company: 'Skyrus Token Exchange Platform',
@@ -77,6 +95,7 @@ export const experiences: Experience[] = [
       'Ensured platform met user and security requirements across teams.',
     ],
     tags: ['Exchange', 'Blockchain', 'Security', 'Scalability'],
+    url: 'https://skyrus.io',
   },
   {
     company: 'Azimuth1',
@@ -89,6 +108,7 @@ export const experiences: Experience[] = [
       'Optimized performance and ensured seamless user experience.',
     ],
     tags: ['Ionic', 'Flutter', 'Mobile', 'Performance'],
+    url: 'https://azimuth1.com',
   },
   {
     company: 'Tokenmom Exchange',
@@ -101,6 +121,7 @@ export const experiences: Experience[] = [
       'Optimized system performance for secure, high-traffic operations.',
     ],
     tags: ['Node.js', 'Exchange', 'Performance', 'Security'],
+    url: 'https://tokenmom.com',
   },
   {
     company: 'DoubleFactory.jp',
@@ -113,6 +134,7 @@ export const experiences: Experience[] = [
       'Worked across front-end and back-end to meet client needs.',
     ],
     tags: ['Web Development', 'Security', 'Scalability'],
+    url: 'https://doublefactory.jp',
   },
   {
     company: 'Paktak.com.hk',
@@ -124,6 +146,7 @@ export const experiences: Experience[] = [
       'Optimized design and functionality for improved UX across devices.',
     ],
     tags: ['Responsive Design', 'Frontend'],
+    url: 'https://paktak.com.hk',
   },
   {
     company: 'Spectrum4Med',
@@ -136,6 +159,7 @@ export const experiences: Experience[] = [
       'Provided ongoing support and updates.',
     ],
     tags: ['WordPress', 'Security', 'Performance'],
+    url: 'https://spectrum4med.com',
   },
   {
     company: 'Sendinblue (Brevo)',
@@ -148,6 +172,7 @@ export const experiences: Experience[] = [
       'Ensured smooth plugin operation and effective issue resolution.',
     ],
     tags: ['Support', 'WordPress', 'Integration'],
+    url: 'https://www.brevo.com',
   },
   {
     company: 'Inshbay, Co., Ltd.',
@@ -160,6 +185,7 @@ export const experiences: Experience[] = [
       'Enhanced functionality for Merchant and User apps.',
     ],
     tags: ['Android', 'iOS', 'Mobile', 'UI/UX'],
+    url: 'https://inshbay.com',
   },
   {
     company: 'Freelancer',
@@ -170,6 +196,7 @@ export const experiences: Experience[] = [
       'Delivered custom full-stack solutions across multiple industries.',
       'Built and maintained web applications with integrated frontends and backends.',
     ],
+    url: 'https://freelancer.com',
     tags: ['Full Stack', 'Web'],
   },
 ]

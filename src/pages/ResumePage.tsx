@@ -1,9 +1,17 @@
 import { experiences, profile, skills, summary, education, links, spokenLanguages } from '../data/resume'
+import { useReveal } from '../hooks/useReveal'
 
 export function ResumePage() {
+  const heroRef = useReveal<HTMLDivElement>()
+  const summaryRef = useReveal<HTMLParagraphElement>()
+  const expRef = useReveal<HTMLDivElement>()
+  const asideRef = useReveal<HTMLElement>()
   return (
     <section className="resume">
-      <div className="hero">
+      <div ref={heroRef} className="hero">
+        {profile.avatarUrl && (
+          <img className="avatar" src={profile.avatarUrl} alt={profile.name} loading="lazy" width={96} height={96} />
+        )}
         <h1 className="name">{profile.name}</h1>
         <p className="title">{profile.title}</p>
         <div className="contact">
@@ -14,17 +22,20 @@ export function ResumePage() {
         </div>
       </div>
 
-      <p className="summary">{summary}</p>
+      <p ref={summaryRef} className="summary">{summary}</p>
 
       <div className="grid two">
-        <div>
+        <div ref={expRef}>
           <h2>Experience</h2>
           <ul className="experience-list">
             {experiences.map((exp) => (
               <li key={`${exp.company}-${exp.from}`} className="experience-item">
                 <div className="exp-head">
                   <h3>{exp.role}</h3>
-                  <span className="exp-meta">{exp.company} · {exp.from} – {exp.to}</span>
+                  <span className="exp-meta">
+                    {exp.url ? <a href={exp.url} target="_blank" rel="noreferrer">{exp.company}</a> : exp.company}
+                    {' '}· {exp.from} – {exp.to}
+                  </span>
                 </div>
                 <ul className="bullets">
                   {exp.bullets.map((b, i) => (
@@ -43,7 +54,7 @@ export function ResumePage() {
           </ul>
         </div>
 
-        <aside>
+        <aside ref={asideRef}>
           <h2>Skills</h2>
           <div className="skills">
             <div>
