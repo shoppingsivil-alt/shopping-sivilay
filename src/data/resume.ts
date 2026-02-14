@@ -24,7 +24,7 @@ export type Skills = {
 }
 
 export const profile = {
-  name: 'Zachary Gonzales',
+  name: 'Zackary Gonzales',
   title: 'Software Developer',
   email: 'shopping.sivil@gmail.com',
   phones: ['+1 (786) 969-2645', '+1 (757) 337-7641'],

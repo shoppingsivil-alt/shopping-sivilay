@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </main>
       <footer className="site-footer">
-        <p>© {new Date().getFullYear()} Zachary Gonzales</p>
+        <p>© {new Date().getFullYear()} Zackary Gonzales</p>
       </footer>
     </div>
   )
